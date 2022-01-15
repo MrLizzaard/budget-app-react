@@ -1,5 +1,6 @@
 import { Button, Stack } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
+import BugetCard from "./components/BugetCard";
 
 function App() {
   return (
@@ -9,7 +10,10 @@ function App() {
         <Button variant="primary">예산 추가</Button>
         <Button variant="outline-primary">지출 추가</Button>
       </Stack>
-      <div></div>
+      {/* style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill , minmax(300px 1fr))", gap: "1rem", alignItems: "flex-start" }} */}
+      <div>
+        <BugetCard name="유흥" amount={200} max={1000}></BugetCard>
+      </div>
     </Container>
   );
 }
